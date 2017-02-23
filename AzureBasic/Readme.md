@@ -1,23 +1,27 @@
-<b>Setting Up the Basics of Microsoft Azure </b><br />
+<b>Setting Up the Basics of Microsoft Azure Platform </b><br />
 Before proceeding create a Microsoft account and signup for azure service, it will require few steps before you can start using these services. Once done, go to the portal.azure.com.
 
 <b>How to create non Classic version of Azure Blob storage account?</b><br />
 To create the storage account, go to new>Storage>New Storage account.
 
-<img src='Media/1.png?raw=true' align='middle' />
+<center>![Alt text](Media/1.png?raw=true)</center>
+
 
 Enter your name and select the details. To create a non-classic account, let the deployment model be Resource Manager (Default), once done press create. 
 
-<img src='Media/2.png?raw=true' align='middle' />
-
+<center>![Alt text](Media/2.png?style=centerme)</center>
+img[src$="centerme"] {
+  display:block;
+  margin: 0 auto;
+}
 <b>How to create a container?</b><br />
 To create container in the storage account, select the storage, and scroll down the left side bar, you will see the containers option under blob service.
 
-<img src='Media/3.png?raw=true' align='middle' />
+<center>![Alt text](Media/3.png?raw=true)</center>
 
 Press Containers then add container from the top.
 
-<img src='Media/4.png?raw=true' align='middle' />
+<center>![Alt text](Media/4.png?raw=true)</center>
 
 Now enter the name and select the access type (For Public or Private), press create.
 
