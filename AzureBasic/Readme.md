@@ -1,18 +1,18 @@
 Before proceeding create a Microsoft account and signup for azure service, it will require few steps before you can start using these services. Once done, go to the portal.azure.com.
 
-<b/>How to create non Classic version of Azure Blob storage account?</b></br>
+<b>How to create non Classic version of Azure Blob storage account?</b></br>
 To create the storage account, go to new>Storage>New Storage account.
 
-![Alt text](Mmedia/1.jpg?raw=true)
+![Alt text](Media/1.jpg?raw=true)
 
 Enter your name and select the details. To create a non-classic account, let the deployment model be Resource Manager (Default), once done press create. 
 
 ![Alt text](media/2.png?raw=true)
 
-<b/>How to create a container?</b></br>
+<b>How to create a container?</b></br>
 To create container in the storage account, select the storage, and scroll down the left side bar, you will see the containers option under blob service.
 
-![Alt text](media/3.png?raw=true)
+![Alt text](Media/3.png?raw=true)
 
 Press Containers then add container from the top.
 
@@ -20,26 +20,26 @@ Press Containers then add container from the top.
 
 Now enter the name and select the access type (For Public or Private), press create.
 
-How to see the containers in the storage account?
+<b>How to see the containers in the storage account?</b></br>
 To see containers associated with that storage account, simply click the containers under blob service as done before. The main section will enlist all the containers along with their details.
 
-How to upload data to container?
+<b>How to upload data to container?</b></br>
 To upload data to container press the container name (container1, see the last image), and then press upload.
 Select the file to upload, select blob type and size, press upload.
 
-How to see items inside the containers?
+<b>How to see items inside the containers?</b></br>
 To see all the items associated with that containers, click the container section, and then name. It will list down all the items in that container.
 
-How to delete an item in a container?
+<b>How to delete an item in a container?</b></br>
 To delete item in a container, select the item and click delete from the right top corner.
 
-How to delete a container?
+<b>How to delete a container?</b></br>
 To delete container, select the container and click the delete container button.
 
-How to delete the storage account?
+<b>How to delete the storage account?</b></br>
 To delete the storage account, click overview and then press the delete button in the next window.
-
-Creating a simple program in Java using Eclipse on Azure platform
+<b>
+Creating a simple program in Java using Eclipse on Azure platform</b></br>
 Before creating a program in Java, we need to ensure that all the tools are installed correctly. For Azure tools we need the following:
 •	Eclipse IDE for Java EE Developers, Luna or later.
 •	Java Development Kit, 1.8 or later
@@ -48,7 +48,7 @@ Supported Operating Systems:
 •	Ubuntu Linux Versions 12 or later
 •	Mac OS X Versions "Yosemite" and "El Captain"
 
-Azure tools for Eclipse can be installed from the help tab in the Eclipse.
+<b>Azure tools for Eclipse can be installed from the help tab in the Eclipse.</b></br>
 You will need to enter http://dl.microsoft.com/eclipse in the “work with” text field, this will show the required tools that you need to download.
 Press next and agree to the terms, it will take few minutes to download and install. Once done, you will need to restart the eclipse.
 
