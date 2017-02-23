@@ -1,37 +1,48 @@
+<center><b>Setting Up Microsoft Azure </b></center>
 Before proceeding create a Microsoft account and signup for azure service, it will require few steps before you can start using these services. Once done, go to the portal.azure.com.
 
 <b>How to create non Classic version of Azure Blob storage account?</b></br>
 To create the storage account, go to new>Storage>New Storage account.
 
-![Alt text](Media/1.jpg?raw=true)
+<center>![Alt text](Media/1.png?raw=true)</center>
 
 Enter your name and select the details. To create a non-classic account, let the deployment model be Resource Manager (Default), once done press create. 
 
-![Alt text](media/2.png?raw=true)
+<center>![Alt text](Media/2.png?raw=true)</center>
 
 <b>How to create a container?</b></br>
 To create container in the storage account, select the storage, and scroll down the left side bar, you will see the containers option under blob service.
 
-![Alt text](Media/3.png?raw=true)
+<center>![Alt text](Media/3.png?raw=true)</center>
 
 Press Containers then add container from the top.
 
-![Alt text](media/4.jpg?raw=true)
+<center>![Alt text](Media/4.png?raw=true)</center>
 
 Now enter the name and select the access type (For Public or Private), press create.
 
+<center>![Alt text](Media/5.png?raw=true)</center>
+
 <b>How to see the containers in the storage account?</b></br>
 To see containers associated with that storage account, simply click the containers under blob service as done before. The main section will enlist all the containers along with their details.
+
+<center>![Alt text](Media/6.png?raw=true)</center>
 
 <b>How to upload data to container?</b></br>
 To upload data to container press the container name (container1, see the last image), and then press upload.
 Select the file to upload, select blob type and size, press upload.
 
+<center>![Alt text](Media/7.png?raw=true)</center>
+
 <b>How to see items inside the containers?</b></br>
 To see all the items associated with that containers, click the container section, and then name. It will list down all the items in that container.
 
+<center>![Alt text](Media/8.png?raw=true)</center>
+
 <b>How to delete an item in a container?</b></br>
 To delete item in a container, select the item and click delete from the right top corner.
+
+<center>![Alt text](Media/9.png?raw=true)</center>
 
 <b>How to delete a container?</b></br>
 To delete container, select the container and click the delete container button.
