@@ -21,7 +21,8 @@ You will see a Cluster summary window, press create to deploy your cluster.
 This will take few minutes.
 
 <b>How to submit and execute Spark job script to cluster?</b><br />
-In order to make a program for Spark using Scala, you need to download the Spark library from here.
+In order to make a program for Spark using Scala, you might need to see <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apache-spark-create-standalone-application" target="_blank">this</a>.
+
 We will create a simple word to count program in scala using basic function. Get <a href="https://github.com/MJFND/MicrosoftAzure/blob/master/AzureAdvanced/job.scala" target="_blank" >full code</a>.
 
 The following line reads the fruits.txt from the blob storage, you can also see by excessing the directory through Portal.
@@ -43,7 +44,7 @@ Once done with the code, right Click on the project name in the explorer and pre
 <p align="center"><img src="Media/5.png?raw=true"></p>
 
 Or the alternate way is to upload the jar file directly using AzCopy.<br />
-To execute the script, use a tool named “livy”. If you are using Python or Scala you can also run the script from the Jupytor NoteBook.
+To run the application on the Spark Cluster, use a tool named “livy” (<a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apache-spark-livy-rest-interface" target="_blank">See More</a>). If you are using Python or Scala you can also run the script from the Jupytor NoteBook.
 
 <b>How to transfer job results to blob? </b><br />
 To store the results in a blob, simply use the following commands in your program. It will automatically store it at your desired location once executed.
