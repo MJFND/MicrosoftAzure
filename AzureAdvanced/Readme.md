@@ -1,4 +1,4 @@
-<b>Setting Up the Basics of Microsoft Azure Platform </b><br />
+<b>Advanced Features of Microsoft Azure Platform </b><br />
 Before proceeding create a Microsoft account and signup for azure service, it will require few steps before you can start using these services. Once done, go to the <a href="https://portal.azure.com/" target="_blank">Azure Portal</a>.
 
 <b>How to create HDInsight cluster?</b><br />
@@ -25,33 +25,29 @@ In order to make a program for Spark using Scala, you need to download the Spark
 We will create a simple word to count program in scala using basic function. Get <a href="https://github.com/MJFND/MicrosoftAzure/blob/master/AzureAdvanced/job.scala" target="_blank" >full code</a>.
 
 The following line reads the fruits.txt from the blob storage, you can also see by excessing the directory through Portal.
-
-<b>val textFile = sc.textFile("wasb:///example/data/fruits.txt") </b>
+<i>val textFile = sc.textFile("wasb:///example/data/fruits.txt") </i>
 
 This command counts the occurrence of each word with the help of four functions flatMap, split, map and, reduceByKey.
+<i>val counts = textFile.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)</i>
 
-<b>val counts = textFile.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)</b>
-
-Split: this function splits text on the desired criteria, in our case “ ”.
-Map: this function maps each word with 1.
-ReduceByKey: this function reduces on the basis of the key (word in our case), for example we have two same names available (Apple, 1) and (Apple, 1), this function will reduce it to (Apple, 2).
+Split: this function splits text on the desired criteria, in our case “ ”.<br />
+Map: this function maps each word with 1.<br />
+ReduceByKey: this function reduces on the basis of the key (word in our case), for example we have two same names available (Apple, 1) and (Apple, 1), this function will reduce it to (Apple, 2).<br />
 FlatMap: It is similar to Map but it returns a list.
 
 The following command is explained in the later part.
-
-<b>counts.coalesce(1,true).saveAsTextFile("wasb:///example/data/fruitcount.txt")</b>
+<i>counts.coalesce(1,true).saveAsTextFile("wasb:///example/data/fruitcount.txt")</i>
 
 Once done with the code, right Click on the project name in the explorer and press Submit Spark Application to HDInsight. This will take few minutes to submit your job, you can see the job listed in the Spark History Server.
 
 <p align="center"><img src="Media/5.png?raw=true"></p>
 
-Or the alternate way is to upload the jar file directly using AzCopy.
+Or the alternate way is to upload the jar file directly using AzCopy.<br />
 To execute the script, use a tool named “livy”. If you are using Python or Scala you can also run the script from the Jupytor NoteBook.
 
 <b>How to transfer job results to blob? </b><br />
 To store the results in a blob, simply use the following commands in your program. It will automatically store it at your desired location once executed.
-
-<b>counts.coalesce(1,true).saveAsTextFile("wasb:///example/data/fruitcount.txt")</b>
+<i>counts.coalesce(1,true).saveAsTextFile("wasb:///example/data/fruitcount.txt")</i>
 
 Coalesce: this function simply saves the output in a single file otherwise the output could be saved in multiple files depending upon the type results.
 You can see your file in the directory.
@@ -59,17 +55,17 @@ You can see your file in the directory.
 <p align="center"><img src="Media/6.png?raw=true"></p>
 
 To see the output download the file named part-0000. The file contains the following:<br />
-(orange,1)
-(pineapple,1)
-(canary,1)
-(apple,1)
-(banana,1)
-(grape,1)
-(lemon,1)
-(strawberry,1)
-(melon,1)
-
-Get <a href="https://github.com/MJFND/MicrosoftAzure/blob/master/AzureAdvanced/job.scala" target="_blank" >the filee</a>.
+<i>(orange,1)<br />
+(pineapple,1)<br />
+(canary,1)<br />
+(apple,1)<br />
+(banana,1)<br />
+(grape,1)<br />
+(lemon,1)<br />
+(strawberry,1)<br />
+(melon,1)<br />
+</i>
+Get <a href="https://github.com/MJFND/MicrosoftAzure/blob/master/AzureAdvanced/part-00000" target="_blank" >the file</a>.
 
 <b>How to delete HDInsight cluster?</b><br />
 To delete the cluster, click on your cluster and press delete button present on top of the window.
