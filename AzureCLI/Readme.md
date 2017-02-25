@@ -13,13 +13,14 @@ You will be prompted to type the password.
 Once you have logged in, now you can manage Azure services.
 
 
-<br /><b>In order to create a resource group switch to resource manager mode.</b><br />
+<br /><b>Creating a resource group.</b><br />
 Resource group contains all the resources for Azure solution. It is used to allow users to manage all the resources efficiently. <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview" target="_blank">Learn More</a>
+<br />
+In order to create a resource group switch to resource manager mode.
 ```
 azure config mode arm
 ```
-
-<br /><b>Create a resource group with the following command. </b><br />
+<br /> Now create a resource group with the following command.
 ```
 azure group create groupname location.
 ```
