@@ -56,8 +56,7 @@ export AZURE_STORAGE_ACCOUNT= account_name
 export AZURE_STORAGE_ACCESS_KEY= key
 ```
 <i>account_name</i>: name of the storage account.<br />
-<i>key</i>: the key retrieved in the previous step<br /><br />
-
+<i>key</i>: the key retrieved in the previous step<br />
 
 <br /><b>Creating a container. </b><br />
 A container is a part of Storage account, it is like a folder that keeps the Blobs. It is used to maange the data easily. While blob is a file of any type or size.<br />
