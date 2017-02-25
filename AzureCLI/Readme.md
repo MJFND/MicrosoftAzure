@@ -1,9 +1,9 @@
 <b>Managing Azure Services using Azure CLI</b><br />
 Azure CLI is a cross-platform command line tool that allows users to manage all Azure features directly from their computers. Azure CLI can create, modify delete clusters, storage accounts and other required services.<br />
-<br />
+<br /><b>Setting up Azure CLI</b><br />
 Before Procceding, you need to install the Azure CLI, follow this <a href="https://docs.microsoft.com/en-us/azure/xplat-cli-install" target="_blank">Guide</a>.
 <br />
-
+<br />
 <b>Azure CLI will require you to login to your Azure account, type the following command.</b><br />
 ```
 azure login -u myUserName@contoso.onmicrosoft.com
@@ -11,13 +11,14 @@ azure login -u myUserName@contoso.onmicrosoft.com
 You will be prompted to type the password.
 Once you have logged in, now you can manage Azure services.
 
-<b>In order to create a resource group switch to resource manager mode.</b><br />
+
+<br /><b>In order to create a resource group switch to resource manager mode.</b><br />
 Resource group contains all the resources for Azure solution. <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview" target="_blank">Learn More</a>
 ```
 azure config mode arm
 ```
 
-<b>Create a resource group with the following command. </b><br />
+<br /><b>Create a resource group with the following command. </b><br />
 ```
 azure group create groupname location.
 ```
@@ -28,7 +29,7 @@ To get the list of location.<br />
 azure location list
 ```
 
-<b>Creating a Storage account.</b><br />
+<br /><b>Creating a Storage account.</b><br />
 ```
 azure storage account create -g groupname --sku-name RAGRS -l location --kind Storage storagename
 ```
@@ -47,8 +48,8 @@ azure storage account keys list -g groupname storagename
 <i>Groupname</i>: the group name of the resource.<br />
 <i>Storagename</i>: the name of the storage.<br />
 
-<b>Creating a container. </b><br />
-A container is a part of Storage account, it is like a folder that keeps the Blobs. While blob can keep all types of data.<br />
+<br /><b>Creating a container. </b><br />
+A container is a part of Storage account, it is like a folder that keeps the Blobs. While blob can be called files that can keep all types of data.<br />
 ```
 azure storage container create -n container_name
 ```
@@ -65,7 +66,7 @@ To set access to that container use:<br />
 ```
 azure storage container list
 ```
-<b>Uploading Blob to a container.</b><br />
+<br /><b>Uploading Blob to a container.</b><br />
 ```
 azure storage blob upload -f local_file_path -c container_name -n blob_name
 ```
@@ -73,7 +74,7 @@ azure storage blob upload -f local_file_path -c container_name -n blob_name
 <i>container_name</i>: name of the container where you want to upload the blob<br />
 <i>blob_name: the</i> name of the blob<br />
 
-<b>Listing Down all the items in the container.</b><br />
+<br /><b>Listing Down all the items in the container.</b><br />
 ```
 azure storage blob list container-name
 ```
@@ -86,20 +87,15 @@ azure storage blob delete container_name blob_name
 <i>container_name</i>: name of the container <br />
 <i>blob_name</i>: name of the file you want to delete <br />
 
-<b>Deleting a container in the storage account.</b><br />
+<br /><b>Deleting a container in the storage account.</b><br />
 ```
 azure storage delete container_name
 ```
 <i>container_name: name of the container you want to delete.
 
-<b>Deleting the storage account.</b><br />
+<br /><b>Deleting the storage account.</b><br />
 ```
 azure storage account delete name
 ```
 <i>name</i>: name of the account you want to delete.
 
-<style>
-b{
-font-size:12px;
-}
-</style>
