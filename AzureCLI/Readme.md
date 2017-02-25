@@ -1,5 +1,8 @@
 <b>Managing Azure Services using Azure CLI</b><br />
-Azure CLI is a cross-platform command line tool that allows users to manage all Azure features directly from the personal computers. Azure CLI can create, modify delete clusters, storage accounts and other required services.
+Azure CLI is a cross-platform command line tool that allows users to manage all Azure features directly from their computers. Azure CLI can create, modify delete clusters, storage accounts and other required services.<br />
+<br />
+Before Procceding, you need to install the Azure CLI, follow this <a href="https://docs.microsoft.com/en-us/azure/xplat-cli-install" target="_blank">Guide</a>.
+<br />
 
 <b>Azure CLI will require you to login to your Azure account, type the following command.</b><br />
 ```
@@ -9,18 +12,21 @@ You will be prompted to type the password.
 Once you have logged in, now you can manage Azure services.
 
 <b>In order to create a resource group switch to resource manager mode.</b><br />
+Resource group contains all the resources for Azure solution. <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview" target="_blank">Learn More</a>
 ```
 azure config mode arm
 ```
 
-<b>Create a resource group with the following command. Resource group contains all the resources for Azure solution. <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview" target="_blanl">Learn More</a></b><br />
+<b>Create a resource group with the following command. </b><br />
 ```
 azure group create groupname location.
 ```
 Groupname: a unique name for that group.<br />
 Location: location for the group. <br />
 To get the list of location.<br />
-azure location list<br />
+```
+azure location list
+```
 
 <b>Creating a Storage account.</b><br />
 ```
@@ -42,13 +48,16 @@ Replace the following parameters:
 Groupname: the group name of the resource.<br />
 Storagename: the name of the storage.<br />
 
-<b>Creating a container. A container is a part of Storage account, it is like a folder that keeps the Blobs. While blob can keep all types of data.</b><br />
+<b>Creating a container. </b><br />
+A container is a part of Storage account, it is like a folder that keeps the Blobs. While blob can keep all types of data.<br />
 ```
 azure storage container create -n container_name
 ```
 Replace container_name with your desired name.<br />
 To set access to that container use:<br />
---public-access off/blob/container<br />
+```
+--public-access off/blob/container
+```
 Off: Container data is private to the account owner.<br />
 blob: Public read access for blobs.<br />
 container: Public read and list access to the entire container.<br />
@@ -89,4 +98,3 @@ container_name: name of the container you want to delete.
 azure storage account delete name
 ```
 name: name of the account you want to delete.
-
