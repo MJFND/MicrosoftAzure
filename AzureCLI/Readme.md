@@ -1,4 +1,4 @@
-<h1><b>Managing Azure Services using Azure CLI</b><h1><br />
+<h1><b>Managing Azure Services using Azure CLI</b></h1><br />
 Azure CLI is a cross-platform command line tool that allows users to manage all Azure features directly from their computers. Azure CLI can create, modify delete clusters, storage accounts and other required services.<br />
 
 <br /><b>Setting up Azure CLI</b><br />
