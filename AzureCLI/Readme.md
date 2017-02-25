@@ -2,7 +2,7 @@
 Azure CLI is a cross-platform command line tool that allows users to manage all Azure features directly from their computers. Azure CLI can create, modify delete clusters, storage accounts and other required services.<br />
 
 <br /><b>Setting up Azure CLI</b><br />
-Before Procceding, you need to install the Azure CLI, follow this <a href="https://docs.microsoft.com/en-us/azure/xplat-cli-install" target="_blank">Guide</a>.<br /><br />
+Before Procceding, you need to install the Azure CLI, follow this <a href="https://docs.microsoft.com/en-us/azure/xplat-cli-install" target="_blank">Guide</a>.<br />
 
 
 <br /><b>Azure CLI will require you to login to your Azure account, type the following command.</b><br />
@@ -14,7 +14,7 @@ Once you have logged in, now you can manage Azure services.
 
 
 <br /><b>In order to create a resource group switch to resource manager mode.</b><br />
-Resource group contains all the resources for Azure solution. It is used to allow users to manage all the resources efficiently.<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview" target="_blank">Learn More</a>
+Resource group contains all the resources for Azure solution. It is used to allow users to manage all the resources efficiently. <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview" target="_blank">Learn More</a>
 ```
 azure config mode arm
 ```
@@ -54,7 +54,7 @@ A container is a part of Storage account, it is like a folder that keeps the Blo
 ```
 azure storage container create -n container_name
 ```
-<i>container_name</i>: replace with your desired name.<br />
+<i>container_name</i>: replace with your desired name.<br /><br />
 To set access to that container use:<br />
 ```
 --public-access off/blob/container
