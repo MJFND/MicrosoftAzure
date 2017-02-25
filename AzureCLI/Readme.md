@@ -1,5 +1,6 @@
-<b>Managing Azure Services using Azure CLI</b><br />
+<h1><b>Managing Azure Services using Azure CLI</b><h1><br />
 Azure CLI is a cross-platform command line tool that allows users to manage all Azure features directly from their computers. Azure CLI can create, modify delete clusters, storage accounts and other required services.<br />
+
 <br /><b>Setting up Azure CLI</b><br />
 Before Procceding, you need to install the Azure CLI, follow this <a href="https://docs.microsoft.com/en-us/azure/xplat-cli-install" target="_blank">Guide</a>.
 <br />
@@ -33,7 +34,7 @@ azure location list
 ```
 azure storage account create -g groupname --sku-name RAGRS -l location --kind Storage storagename
 ```
-<i>Groupname</i>: the name of the group you created in the last step.<br /><br />
+<i>Groupname</i>: the name of the group you created in the last step.<br />
 <i>Location</i>: the location you picked in the last step.<br />
 <i>Storagename</i>: a unique name for your storage account.<br />
 For help on the storage account:
@@ -41,7 +42,7 @@ For help on the storage account:
 azure storage account create –h
 ```
 
-<b>Retrieving Key for Storage account.</b><br />
+<br /><b>Retrieving Key for Storage account.</b><br />
 ```
 azure storage account keys list -g groupname storagename
 ```
@@ -49,7 +50,7 @@ azure storage account keys list -g groupname storagename
 <i>Storagename</i>: the name of the storage.<br />
 
 <br /><b>Creating a container. </b><br />
-A container is a part of Storage account, it is like a folder that keeps the Blobs. While blob can be called files that can keep all types of data.<br />
+A container is a part of Storage account, it is like a folder that keeps the Blobs. It is used to maange the data easily. While blob is a file of any type or size.<br />
 ```
 azure storage container create -n container_name
 ```
@@ -62,7 +63,7 @@ To set access to that container use:<br />
 <i>blob</i>: Public read access for blobs.<br />
 <i>container</i>: Public read and list access to the entire container.<br />
 
-<b>Listing down all the containers in the storage account.</b><br />
+<br /><b>Listing down all the containers in the storage account.</b><br />
 ```
 azure storage container list
 ```
@@ -80,7 +81,7 @@ azure storage blob list container-name
 ```
 <i>container-name</i>: replace it to the name of the container.
 
-<b>Deleting an item in a container.</b><br />
+<br /><b>Deleting an item in a container.</b><br />
 ```
 azure storage blob delete container_name blob_name
 ```
