@@ -36,7 +36,7 @@ azure storage account create -g groupname --sku-name RAGRS -l location --kind St
 ```
 <i>Groupname</i>: the name of the group you created in the last step.<br />
 <i>Location</i>: the location you picked in the last step.<br />
-<i>Storagename</i>: a unique name for your storage account.<br />
+<i>Storagename</i>: a unique name for your storage account.<br /><br />
 For help on the storage account:
 ```
 azure storage account create –h
