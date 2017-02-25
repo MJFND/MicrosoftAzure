@@ -49,6 +49,16 @@ azure storage account keys list -g groupname storagename
 <i>Groupname</i>: the group name of the resource.<br />
 <i>Storagename</i>: the name of the storage.<br />
 
+<br /><b>Setting environment variables for default Azure storage.</b><br />
+You can have multiple storage accounts, but to use one account as default, you will need to setup environment variables.<br />
+```
+export AZURE_STORAGE_ACCOUNT= account_name
+export AZURE_STORAGE_ACCESS_KEY= key
+```
+<i>account_name</i>: name of the storage account.<br />
+<i>key</i>: the key retrieved in the previous step<br /><br />
+
+
 <br /><b>Creating a container. </b><br />
 A container is a part of Storage account, it is like a folder that keeps the Blobs. It is used to maange the data easily. While blob is a file of any type or size.<br />
 ```
