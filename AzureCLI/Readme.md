@@ -5,7 +5,8 @@ Azure CLI is a cross-platform command line tool that allows users to manage all 
 Before Procceding, you need to install the Azure CLI, follow this <a href="https://docs.microsoft.com/en-us/azure/xplat-cli-install" target="_blank">Guide</a>.<br />
 
 
-<br /><b>Azure CLI will require you to login to your Azure account, type the following command.</b><br />
+<br /><b>Logging in to Azure Account.</b><br />
+Azure CLI will require you to login to your Azure account, type the following command.
 ```
 azure login -u myUserName@contoso.onmicrosoft.com
 ```
@@ -20,7 +21,7 @@ In order to create a resource group switch to resource manager mode.
 ```
 azure config mode arm
 ```
-<br /> Now create a resource group with the following command.
+ Now create a resource group with the following command.
 ```
 azure group create groupname location.
 ```
