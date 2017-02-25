@@ -1,11 +1,11 @@
-<h1><b>Managing Azure Services using Azure CLI</b></h1><br />
+<h1><b>Managing Azure Services using Azure CLI</b></h1>
 Azure CLI is a cross-platform command line tool that allows users to manage all Azure features directly from their computers. Azure CLI can create, modify delete clusters, storage accounts and other required services.<br />
 
 <br /><b>Setting up Azure CLI</b><br />
-Before Procceding, you need to install the Azure CLI, follow this <a href="https://docs.microsoft.com/en-us/azure/xplat-cli-install" target="_blank">Guide</a>.
-<br />
-<br />
-<b>Azure CLI will require you to login to your Azure account, type the following command.</b><br />
+Before Procceding, you need to install the Azure CLI, follow this <a href="https://docs.microsoft.com/en-us/azure/xplat-cli-install" target="_blank">Guide</a>.<br /><br />
+
+
+<br /><b>Azure CLI will require you to login to your Azure account, type the following command.</b><br />
 ```
 azure login -u myUserName@contoso.onmicrosoft.com
 ```
@@ -14,7 +14,7 @@ Once you have logged in, now you can manage Azure services.
 
 
 <br /><b>In order to create a resource group switch to resource manager mode.</b><br />
-Resource group contains all the resources for Azure solution. <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview" target="_blank">Learn More</a>
+Resource group contains all the resources for Azure solution. It is used to allow users to manage all the resources efficiently.<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview" target="_blank">Learn More</a>
 ```
 azure config mode arm
 ```
@@ -24,7 +24,7 @@ azure config mode arm
 azure group create groupname location.
 ```
 <i>Groupname</i>: a unique name for that group.<br />
-<i>Location</i>: location for the group. <br />
+<i>Location</i>: location for the group. <br /><br />
 To get the list of location.<br />
 ```
 azure location list
