@@ -63,7 +63,7 @@ azure storage account keys list -g groupname storagename
 <i>Groupname</i>: the group name of the resource.<br />
 <i>Storagename</i>: the name of the storage.<br />
 
-<p align="center"><img src="Media/5.png?raw=true"></p>
+<p align="center"><img src="Media/5b.png?raw=true"></p>
 
 <br /><b>Setting environment variables for default Azure storage.</b><br />
 You can have multiple storage accounts, but to use one account as default, you will need to setup environment variables.<br />
