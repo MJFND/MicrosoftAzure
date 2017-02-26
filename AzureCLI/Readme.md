@@ -33,7 +33,6 @@ azure group create groupname location.
 ```
 <i>Groupname</i>: a unique name for that group.<br />
 <i>Location</i>: location for the group. <br /><br />
-
 <p align="center"><img src="Media/3.png?raw=true"></p>
 
 To get the list of location.<br />
