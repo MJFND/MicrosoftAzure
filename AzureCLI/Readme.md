@@ -8,9 +8,12 @@ Before Procceding, you need to install the Azure CLI, follow this <a href="https
 <br /><b>Logging in to Azure Account.</b><br />
 Azure CLI will require you to login to your Azure account, type the following command.
 ```
-azure login -u myUserName@contoso.onmicrosoft.com
+azure login
 ```
-You will be prompted to type the password.
+You will be given a link and a code, follow the link you will be logged in.
+
+<p align="center"><img src="Media/1.png?raw=true"></p>
+
 Once you have logged in, now you can manage Azure services.
 
 
@@ -21,12 +24,18 @@ In order to create a resource group switch to resource manager mode.
 ```
 azure config mode arm
 ```
- Now create a resource group with the following command.
+
+<p align="center"><img src="Media/2.png?raw=true"></p>
+
+Now create a resource group with the following command.
 ```
 azure group create groupname location.
 ```
 <i>Groupname</i>: a unique name for that group.<br />
 <i>Location</i>: location for the group. <br /><br />
+
+<p align="center"><img src="Media/3.png?raw=true"></p>
+
 To get the list of location.<br />
 ```
 azure location list
@@ -39,6 +48,9 @@ azure storage account create -g groupname --sku-name RAGRS -l location --kind St
 <i>Groupname</i>: the name of the group you created in the last step.<br />
 <i>Location</i>: the location you picked in the last step.<br />
 <i>Storagename</i>: a unique name for your storage account.<br /><br />
+
+<p align="center"><img src="Media/4.png?raw=true"></p>
+
 For help on the storage account:
 ```
 azure storage account create –h
