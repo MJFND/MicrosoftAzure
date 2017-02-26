@@ -71,10 +71,12 @@ You can have multiple storage accounts, but to use one account as default, you w
 set AZURE_STORAGE_ACCOUNT= account_name
 set AZURE_STORAGE_ACCESS_KEY= key
 ```
+
 <i>account_name</i>: name of the storage account.<br />
 <i>key</i>: the key retrieved in the previous step<br />
 
-<p align="center"><img src="Media/6.png?raw=true"></p>
+<p align="center"><img src="Media/5a.png?raw=true"></p>
+
 
 <br /><b>Creating a container. </b><br />
 A container is a part of Storage account, it is like a folder that keeps the Blobs. It is used to maange the data easily. While blob is a file of any type or size.<br />
@@ -82,7 +84,11 @@ A container is a part of Storage account, it is like a folder that keeps the Blo
 azure storage container create container_name
 ```
 <i>container_name</i>: replace with your desired name.<br /><br />
+
+<p align="center"><img src="Media/6.png?raw=true"></p>
+
 To set access to that container use:<br />
+
 ```
 --public-access off/blob/container
 ```
