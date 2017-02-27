@@ -3,8 +3,8 @@ Azure Powershell is a tool that allows users to manage all Azure features direct
 <br />
 
 <br /><b>Downloading Azure PowerShell.</b><br />
-Incase you need to download the Power Shell, follow this link 
-https://github.com/Azure/azure-powershell/releases/tag/v3.6.0-February2017
+Incase you need to download the Power Shell, follow this <a href="https://github.com/Azure/azure-powershell/releases/tag/v3.6.0-February2017" target="_blank">Guide</a>.
+
 
 <br /><b>HDInsight</b><br /> 
 Microsoft Azure HDInsight Azure HD Insight is a service that provides Hadoop/Spark/HBase based clusters that run over Azure Cloud Platform.  These clusters provide solutions to manage, analyze and visualize the reports on big data.
@@ -14,7 +14,7 @@ Before proceeding following Azure Services are required:
 •	Azure resource group
 •	Azure Storage account
 •	Azure Blob container
-How to create? Follow this guide. https://docs.microsoft.com/en-us/azure/storage/storage-powershell-guide-full#how-to-manage-azure-blobs
+How to create? Follow this <a href="https://docs.microsoft.com/en-us/azure/storage/storage-powershell-guide-full#how-to-manage-azure-blobs" target="_blank">Guide</a>. 
 
 <br /><b>Creating HDInsight Cluster.</b><br />
 The following command stores the key in the storagekey variable.
