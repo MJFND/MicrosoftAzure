@@ -11,9 +11,9 @@ Microsoft Azure HDInsight Azure HD Insight is a service that provides Hadoop/Spa
 
 Before proceeding following Azure Services are required:<br /> 
 •	Azure Log In<br /> 
-•	Azure resource group<br /> 
-•	Azure Storage account<br /> 
-•	Azure Blob container<br /> 
+•	Azure Resource Group<br /> 
+•	Azure Storage Account<br /> 
+•	Azure Blob Container<br /> 
 How to do these four tasks? Follow this <a href="https://docs.microsoft.com/en-us/azure/storage/storage-powershell-guide-full#how-to-manage-azure-blobs" target="_blank">Guide</a>. 
 
 <br /><b>Creating HDInsight Cluster.</b><br />
@@ -41,10 +41,9 @@ New-AzureRmHDInsightCluster `
     -Version "3.4" `
     -SshCredential $sshCredentials
 ```
+Replace all the placeholders present within <> with the required/desired options.
 
 <p align="center"><img src="Media/1.png?raw=true"></p>
-
-Replace all the names present between <> with the required/desired options.
 
 <h1><br /><b>MapReduce</b></h1>
 MapReduce is one of the most important part of Apache Hadoop framework. It allows users to process big amount of unstructured data across several computers with every node having its own storage.
@@ -62,17 +61,17 @@ $wordCountJobDefinition = New-AzureRmHDInsightMapReduceJobDefinition `
 <i>File_path</i>: the jar file path e.g wasb:///example/jars/hadoop-mapreduce-examples.jar<br />
 <i>ClassName</i>: name of the class e.g wordcount<br />
 <i>Argument1</i>: the input file path e.g wasb:///example/data/gutenberg/davinci.txt<br />
-<i>Argument2</i>: the output file path e.g wasb:///example/data/WordCountOutput<br />
+<i>Argument2</i>: the output folder path e.g wasb:///example/data/WordCountOutput<br />
 
 Now submitting the job.
 ```
-$cred=Get-Credential -Message "<credentials>"
+$cred=Get-Credential -Message "credentials"
 $wordCountJob = Start-AzureRmHDInsightJob `
      -ClusterName clusterName `
      -JobDefinition $wordCountJobDefinition `
      -HttpCredential $cred
 ```
-<i>Credentials</i>: enter login details for the cluster
+<i>Credentials</i>: enter login details for the cluster<br />
 <i>clusterName</i>: name of the cluster
 
 <p align="center"><img src="Media/2.png?raw=true"></p>
@@ -95,18 +94,19 @@ $context = New-AzureStorageContext `
      -StorageAccountName storage_name `
      -StorageAccountKey $storagekey
 ```  
-<i>storage_name</i>: name of the storage
+<i>storage_name</i>: name of the storage<br />
 <i>$storagekey</i>: already assigned the storage key earlier
 
 Now storing the results to blob.
 ```
 Get-AzureStorageBlobContent `
-     -Blob 'example/data/WordCountOutput/part-r-00000' `
+     -Blob file_path `
      -Container container_name `
      -Destination dest_file`
      -Context $context
 ```
-<i>container_name</i>: name of the container in which you want to save
+<i>file_path</i>: the path of the output file, e.g example/data/WordCountOutput/part-r-00000<br />
+<i>container_name</i>: name of the container in which you want to save<br />
 <i>dest_file</i>: destination file name
 
 <p align="center"><img src="Media/4.png?raw=true"></p>
@@ -117,7 +117,7 @@ Following is the ouput present in the file path-r-0000.
 
 <br /><b>Deleting HDInsight Cluster.</b><br />
 ```
-Remove-AzureRmHDInsightCluster -ClusterName <Cluster_Name>
+Remove-AzureRmHDInsightCluster -ClusterName Cluster_Name
 ```
 <i>Cluster_Name</i>: name of the cluster you want to delete
 
