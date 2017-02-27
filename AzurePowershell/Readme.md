@@ -9,11 +9,11 @@ Incase you need to download the Power Shell, follow this <a href="https://github
 <br /><b>HDInsight</b><br /> 
 Microsoft Azure HDInsight Azure HD Insight is a service that provides Hadoop/Spark/HBase based clusters that run over Azure Cloud Platform.  These clusters provide solutions to manage, analyze and visualize the reports on big data.
 
-Before proceeding following Azure Services are required:
-•	Azure Log In
-•	Azure resource group
-•	Azure Storage account
-•	Azure Blob container
+Before proceeding following Azure Services are required:<br /> 
+•	Azure Log In<br /> 
+•	Azure resource group<br /> 
+•	Azure Storage account<br /> 
+•	Azure Blob container<br /> 
 How to create? Follow this <a href="https://docs.microsoft.com/en-us/azure/storage/storage-powershell-guide-full#how-to-manage-azure-blobs" target="_blank">Guide</a>. 
 
 <br /><b>Creating HDInsight Cluster.</b><br />
