@@ -44,6 +44,65 @@ New-AzureRmHDInsightCluster `
 
 Replace all the names present between <> with the required/desired options.
 
+<br /><b>MapReduce</b><br />
+MapReduce is one of the most important part of Apache Hadoop framework. It allows users to process big amount of unstructured data across several computers with every node having its own storage.
+
+<br /><b>Submitting a MapReduce job.</b><br />
+Before submitting a job, we need to setup the required files path with the help of the following command.
+```
+$wordCountJobDefinition = New-AzureRmHDInsightMapReduceJobDefinition `
+     -JarFile "File_path" `
+     -ClassName "Class_name" `
+     -Arguments `
+         "Argument1", `
+         "Argument2"
+```
+File_path: the jar file path e.g wasb:///example/jars/hadoop-mapreduce-examples.jar
+ClassName: name of the class e.g wordcount
+Argument1: the input file path e.g wasb:///example/data/gutenberg/davinci.txt
+Argument2: the output file path e.g wasb:///example/data/WordCountOutput
+
+Now submitting the job.
+```
+$cred=Get-Credential -Message "<credentials>"
+$wordCountJob = Start-AzureRmHDInsightJob `
+     -ClusterName clusterName `
+     -JobDefinition $wordCountJobDefinition `
+     -HttpCredential $cred
+```
+Credentials: enter login details for the cluster
+clusterName: name of the cluster
+
+Now the job is being executed, in order to wait for the job use the following commands.
+```
+Wait-AzureRmHDInsightJob `
+     -ClusterName clusterName `
+     -JobId $wordCountJob.JobId `
+     -HttpCredential $cred
+```
+clusterName: name of the cluster
+
+<br /><b>Transferring results to a blob storage.</b><br />
+In order to store the results to blob, we need to define the storage and key.
+```
+$context = New-AzureStorageContext `
+     -StorageAccountName storage_name `
+     -StorageAccountKey $storagekey
+```  
+storage_name: name of the storage
+$storagekey: already assigned the storage key earlier
+
+Now storing the results to blob.
+```
+Get-AzureStorageBlobContent `
+     -Blob 'example/data/WordCountOutput/part-r-00000' `
+     -Container container_name `
+     -Destination dest_file`
+     -Context $context
+```
+container_name: name of the container in which you want to save
+dest_file: destination file name
+
 <br /><b>Deleting HDInsight Cluster.</b><br />
 ```
 Remove-AzureRmHDInsightCluster -ClusterName <Cluster_Name>
