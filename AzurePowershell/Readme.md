@@ -42,6 +42,8 @@ New-AzureRmHDInsightCluster `
     -SshCredential $sshCredentials
 ```
 
+<p align="center"><img src="Media/1.png?raw=true"></p>
+
 Replace all the names present between <> with the required/desired options.
 
 <h1><br /><b>MapReduce</b></h1>
@@ -73,6 +75,8 @@ $wordCountJob = Start-AzureRmHDInsightJob `
 <i>Credentials</i>: enter login details for the cluster
 <i>clusterName</i>: name of the cluster
 
+<p align="center"><img src="Media/2.png?raw=true"></p>
+
 Now the job is being executed, in order to wait for the job use the following commands.
 ```
 Wait-AzureRmHDInsightJob `
@@ -80,7 +84,9 @@ Wait-AzureRmHDInsightJob `
      -JobId $wordCountJob.JobId `
      -HttpCredential $cred
 ```
-clusterName: name of the cluster
+<i>clusterName</i>: name of the cluster
+
+<p align="center"><img src="Media/3.png?raw=true"></p>
 
 <br /><b>Transferring results to a blob storage.</b><br />
 In order to store the results to blob, we need to define the storage and key.
@@ -103,8 +109,17 @@ Get-AzureStorageBlobContent `
 <i>container_name</i>: name of the container in which you want to save
 <i>dest_file</i>: destination file name
 
+<p align="center"><img src="Media/4.png?raw=true"></p>
+
+Following is the ouput present in the file path-r-0000.
+
+<p align="center"><img src="Media/5.png?raw=true"></p>
+
 <br /><b>Deleting HDInsight Cluster.</b><br />
 ```
 Remove-AzureRmHDInsightCluster -ClusterName <Cluster_Name>
 ```
 <i>Cluster_Name</i>: name of the cluster you want to delete
+
+<p align="center"><img src="Media/6.png?raw=true"></p>
+
