@@ -44,7 +44,7 @@ New-AzureRmHDInsightCluster `
 
 Replace all the names present between <> with the required/desired options.
 
-<br /><b>MapReduce</b><br />
+<h1><br /><b>MapReduce</b></h1>
 MapReduce is one of the most important part of Apache Hadoop framework. It allows users to process big amount of unstructured data across several computers with every node having its own storage.
 
 <br /><b>Submitting a MapReduce job.</b><br />
@@ -57,10 +57,10 @@ $wordCountJobDefinition = New-AzureRmHDInsightMapReduceJobDefinition `
          "Argument1", `
          "Argument2"
 ```
-File_path: the jar file path e.g wasb:///example/jars/hadoop-mapreduce-examples.jar
-ClassName: name of the class e.g wordcount
-Argument1: the input file path e.g wasb:///example/data/gutenberg/davinci.txt
-Argument2: the output file path e.g wasb:///example/data/WordCountOutput
+<i>File_path</i>: the jar file path e.g wasb:///example/jars/hadoop-mapreduce-examples.jar<br />
+<i>ClassName</i>: name of the class e.g wordcount<br />
+<i>Argument1</i>: the input file path e.g wasb:///example/data/gutenberg/davinci.txt<br />
+<i>Argument2</i>: the output file path e.g wasb:///example/data/WordCountOutput<br />
 
 Now submitting the job.
 ```
@@ -70,8 +70,8 @@ $wordCountJob = Start-AzureRmHDInsightJob `
      -JobDefinition $wordCountJobDefinition `
      -HttpCredential $cred
 ```
-Credentials: enter login details for the cluster
-clusterName: name of the cluster
+<i>Credentials</i>: enter login details for the cluster
+<i>clusterName</i>: name of the cluster
 
 Now the job is being executed, in order to wait for the job use the following commands.
 ```
@@ -89,8 +89,8 @@ $context = New-AzureStorageContext `
      -StorageAccountName storage_name `
      -StorageAccountKey $storagekey
 ```  
-storage_name: name of the storage
-$storagekey: already assigned the storage key earlier
+<i>storage_name</i>: name of the storage
+<i>$storagekey</i>: already assigned the storage key earlier
 
 Now storing the results to blob.
 ```
@@ -100,11 +100,11 @@ Get-AzureStorageBlobContent `
      -Destination dest_file`
      -Context $context
 ```
-container_name: name of the container in which you want to save
-dest_file: destination file name
+<i>container_name</i>: name of the container in which you want to save
+<i>dest_file</i>: destination file name
 
 <br /><b>Deleting HDInsight Cluster.</b><br />
 ```
 Remove-AzureRmHDInsightCluster -ClusterName <Cluster_Name>
 ```
-Cluster_Name: name of the cluster you want to delete
+<i>Cluster_Name</i>: name of the cluster you want to delete
