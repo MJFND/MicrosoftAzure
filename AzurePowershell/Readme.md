@@ -14,7 +14,7 @@ Before proceeding following Azure Services are required:<br />
 •	Azure resource group<br /> 
 •	Azure Storage account<br /> 
 •	Azure Blob container<br /> 
-How to create? Follow this <a href="https://docs.microsoft.com/en-us/azure/storage/storage-powershell-guide-full#how-to-manage-azure-blobs" target="_blank">Guide</a>. 
+How to do these four tasks? Follow this <a href="https://docs.microsoft.com/en-us/azure/storage/storage-powershell-guide-full#how-to-manage-azure-blobs" target="_blank">Guide</a>. 
 
 <br /><b>Creating HDInsight Cluster.</b><br />
 The following command stores the key in the storagekey variable.
